@@ -11,6 +11,7 @@
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/Navbar.css">
+    
 </head>
 
 <body>
@@ -38,91 +39,13 @@
                     <span>GESTIÓN DE EMPLEADOS</span>
                 </a>
                 <ul class="collapse list-unstyled ps-4" id="submenuEmpleados">
-                    <li><a href="#" data-ruta="Employees/Register.html" onclick="cargarVista(event)" class="sidebar-link">Registrar Empleado</a></li>
-                    <li><a href="#" data-ruta="Employees/EditInfo.html" onclick="cargarVista(event)" class="sidebar-link">Editar Información de Empleados</a></li>
+                    <li><a href="#" data-ruta="Employees/Register.html" onclick="cargarVista(event, 'Empleados > Registrar Empleado')" class="sidebar-link">Registrar Empleado</a></li>
+                    <li><a href="#" data-ruta="Employees/EditInfo.html" onclick="cargarVista(event, 'Empleados > Editar Información de Empleados')" class="sidebar-link">Editar Información de Empleados</a></li>
                     <li><a href="#" class="sidebar-link">Lista de empleados</a></li>
                     <li><a href="#" class="sidebar-link">Asignar Roles</a></li>
                 </ul>
             </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#submenuAsistencias"
-                   aria-expanded="false">
-                    <i class="lni lni-calendar"></i>
-                    <span>CONTROL DE ASISTENCIAS</span>
-                </a>
-                <ul class="collapse list-unstyled ps-4" id="submenuAsistencias">
-                    <li><a href="#" class="sidebar-link">Registrar asistencia</a></li>
-                    <li><a href="#" class="sidebar-link">Reporte de asistencias</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#submenuNomina"
-                   aria-expanded="false">
-                    <i class="lni lni-wallet"></i>
-                    <span>GESTIÓN DE NÓMINA</span>
-                </a>
-                <ul class="collapse list-unstyled ps-4" id="submenuNomina">
-                    <li><a href="#" class="sidebar-link">Generar nómina</a></li>
-                    <li><a href="#" class="sidebar-link">Historial de pagos</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#submenuDistribucion"
-                   aria-expanded="false">
-                    <i class="fas fa-truck"></i>
-                    <span>DISTRIBUCIÓN Y LOGÍSTICA</span>
-                </a>
-                <ul class="collapse list-unstyled ps-4" id="submenuDistribucion">
-                    <li><a href="#" class="sidebar-link">Asignación de rutas</a></li>
-                    <li><a href="#" class="sidebar-link">Control de entregas</a></li>
-                    <li><a href="#" class="sidebar-link">Reportes de entregas</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#submenuCapacitacion"
-                   aria-expanded="false">
-                    <i class="lni lni-graduation"></i>
-                    <span>CAPACITACIÓN Y EVALUACIÓN</span>
-                </a>
-                <ul class="collapse list-unstyled ps-4" id="submenuCapacitacion">
-                    <li><a href="#" class="sidebar-link">Cursos disponibles</a></li>
-                    <li><a href="#" class="sidebar-link">Historial de evaluaciones</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#submenuSeguridad"
-                   aria-expanded="false">
-                    <i class="lni lni-shield"></i>
-                    <span>SEGURIDAD LABORAL</span>
-                </a>
-                <ul class="collapse list-unstyled ps-4" id="submenuSeguridad">
-                    <li><a href="#" class="sidebar-link">Protocolos</a></li>
-                    <li><a href="#" class="sidebar-link">Reportar incidente</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#submenuBeneficios"
-                   aria-expanded="false">
-                    <i class="lni lni-heart"></i>
-                    <span>BENEFICIOS Y BIENESTAR</span>
-                </a>
-                <ul class="collapse list-unstyled ps-4" id="submenuBeneficios">
-                    <li><a href="#" class="sidebar-link">Planes de salud</a></li>
-                    <li><a href="#" class="sidebar-link">Beneficios extras</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#submenuConfiguracion"
-                   aria-expanded="false">
-                    <i class="lni lni-cog"></i>
-                    <span>CONFIGURACIÓN</span>
-                </a>
-                <ul class="collapse list-unstyled ps-4" id="submenuConfiguracion">
-                    <li><a href="#" class="sidebar-link">Gestión de roles y permisos</a></li>
-                    <li><a href="#" class="sidebar-link">Personalización del sistema</a></li>
-                    <li><a href="#" class="sidebar-link">Ajustes generales</a></li>
-                </ul>
-            </li>
+            <!-- Otras secciones -->
         </ul>
         <div class="sidebar-footer">
             <a href="Login.html" class="sidebar-link">
@@ -133,19 +56,17 @@
     </aside>
     
     <div class="main justify-content-center" style="height: 100vh; overflow-y: auto; background-color: rgb(224, 229, 229); background-size: cover; background-position: center; background-attachment: fixed;">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Gestión de Empleados</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Registrar Empleado</li>
-            </ol>
-        </nav>
-
         <div id="content" class="text-center justify-content-center" style="height: 100%; ">
-            <iframe src="Home.html" style="height: 100%; display: flex; flex-direction: column; flex-grow: 1; width: 100%; border: none;"></iframe>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" id="breadcrumb-container">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                </ol>
+            </nav>
+            <iframe src="Home.html" style="height: 100%; display: flex; flex-direction: column; flex-grow: 1; width: 100%; border: none;" id="content-frame"></iframe>
         </div>
     </div>
-
+    
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -153,25 +74,13 @@
         crossorigin="anonymous"></script>
 <script src="../js/Navbar.js"></script>
 <script src="../js/Employees/cargarvistas.js"></script>
-<script>
-    function actualizarBreadcrumbs(ruta) {
-        const breadcrumbs = document.querySelectorAll('.breadcrumb-item');
-        // Actualiza los breadcrumbs según la ruta
-        if (ruta.includes("Home")) {
-            breadcrumbs[0].innerHTML = "<a href='#'>Home</a>";
-            breadcrumbs[1].innerHTML = "<a href='#'>Gestión de Empleados</a>";
-            breadcrumbs[2].innerHTML = "Registrar Empleado";
-        } else if (ruta.includes("Empleados")) {
-            breadcrumbs[0].innerHTML = "<a href='#'>Home</a>";
-            breadcrumbs[1].innerHTML = "<a href='#'>Gestión de Empleados</a>";
-            breadcrumbs[2].innerHTML = "Editar Información de Empleados";
-        }
-    }
 
-    function cargarVista(event) {
+<script>
+    function cargarVista(event, breadcrumbText) {
         event.preventDefault();
         const ruta = event.target.getAttribute('data-ruta');
         const iframe = document.querySelector('iframe');
+        const breadcrumbContainer = document.getElementById('breadcrumb-container');
 
         if (!ruta) {
             window.location.href = 'error.html';
@@ -182,7 +91,8 @@
             .then(response => {
                 if (response.ok) {
                     iframe.src = ruta;
-                    actualizarBreadcrumbs(ruta); // Actualizar los breadcrumbs al cambiar la vista
+                    // Actualizar los breadcrumbs
+                    actualizarBreadcrumbs(breadcrumbText);
                 } else {
                     throw new Error('Página no encontrada');
                 }
@@ -192,6 +102,31 @@
             });
     }
 
+    // Actualiza los breadcrumbs con el texto proporcionado
+    function actualizarBreadcrumbs(breadcrumbText) {
+        const breadcrumbContainer = document.getElementById('breadcrumb-container');
+        const breadcrumbItems = breadcrumbText.split(' > ');
+        
+        // Limpiar los breadcrumbs actuales
+        breadcrumbContainer.innerHTML = '';
+
+        breadcrumbItems.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.classList.add('breadcrumb-item');
+            if (index === breadcrumbItems.length - 1) {
+                li.classList.add('active');
+                li.setAttribute('aria-current', 'page');
+                li.innerText = item;
+            } else {
+                const a = document.createElement('a');
+                a.href = '#';
+                a.innerText = item;
+                li.appendChild(a);
+            }
+            breadcrumbContainer.appendChild(li);
+        });
+    }
+
     // Manejo global de errores en el iframe
     document.querySelector('iframe').onerror = function () {
         window.location.href = 'error.html';
@@ -199,5 +134,4 @@
 </script>
 
 </body>
-
 </html>
