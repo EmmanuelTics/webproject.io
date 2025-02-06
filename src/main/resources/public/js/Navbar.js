@@ -87,7 +87,7 @@ document.getElementById('inicioLink').addEventListener('click', function (event)
 
         
         setTimeout(function() {
-            window.location.href = 'Navbar.html'; 
+            window.location.href = 'src/main/resources/public/Navbar.html'; 
         }, 300); 
     } else {
         
