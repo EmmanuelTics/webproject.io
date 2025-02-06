@@ -80,7 +80,7 @@ submenus.forEach(link => {
 document.getElementById('inicioLink').addEventListener('click', function (event) {
     event.preventDefault();
   
-    if (window.location.pathname !== '/Navbar.html') {
+    if (window.location.pathname !== 'src/main/resources/public/Navbar.html') {
       
         document.body.style.transition = 'transform 0.3s ease-out'; 
         document.body.style.transform = 'translateX(-100%)'; 
